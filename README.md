@@ -36,7 +36,7 @@ Naming style and availability may differ slightly across platforms/languages.
 ...If set to false, the solution treats the input images as a video stream. It will try to detect hands in the first input images, and upon a successful detection further localizes the hand landmarks. In subsequent images, once all max_num_hands hands are detected and the corresponding hand landmarks are localized, it simply tracks those landmarks without invoking another detection until it loses track of any of the hands. This reduces latency and is ideal for processing video frames. If set to true, hand detection runs on every input image, ideal for processing a batch of static, possibly unrelated, images. Default to false.
 
 <b>MAX_NUM_HANDS</b><br>
-...Maximum number of hands to detect. Default to 2.
+<t>Maximum number of hands to detect. Default to 2.
 
 <b>MODEL_COMPLEXITY</b><br>
 Complexity of the hand landmark model: 0 or 1. Landmark accuracy as well as inference latency generally go up with the model complexity. Default to 1.
