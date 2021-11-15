@@ -1,6 +1,11 @@
 
 <div align="center">
   <h1>Gesture Volume Control Using OpenCV and Mediapipe</h1>
+  <img src="images/logoProject.png"
+alt="python"
+width="40"
+height="40"></img></a>&nbsp;&nbsp;
+
 </div>
 
 > This Project use OpenCV and Mediapipe to Control volume 
