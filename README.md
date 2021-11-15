@@ -1,10 +1,10 @@
 
 <div align="center">
-  <h1>Gesture Volume Control Using OpenCV and Mediapipe</h1>
+  <h1>Gesture Volume Control Using OpenCV and MediaPipe</h1>
   <img alt="output" src="images/output.gif" />
  </div>
 
-> This Project use OpenCV and Mediapipe to Control volume 
+> This Project uses OpenCV and MediaPipe to Control system volume 
 
 ## REQUIREMENTS
 + opencv-python
@@ -16,6 +16,7 @@
 ```bash
 pip install -r requirements.txt
 ```
+***
 ### MEDIAPIPE
 <div align="center">
   <img alt="mediapipeLogo" src="images/mediapipe.png" />
@@ -99,7 +100,7 @@ cam.set(3,wCam)
 cam.set(4,hCam)
 ```
 ***
-Using Mediapipe Hand Landmark Model for identifying Hands 
+Using MediaPipe Hand Landmark Model for identifying Hands 
 ```py
 with mp_hands.Hands(
     model_complexity=0,
@@ -183,6 +184,7 @@ Closing webCam
 ```py
 cam.release()
 ```
+***
 
 <div align = "center">
 <h2>📬 Contact</h2>
