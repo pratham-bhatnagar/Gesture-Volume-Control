@@ -15,8 +15,13 @@
 ```bash
 pip install -r requirements.txt
 ```
-## CODE EXPLINATION
+### MEDIAPIPE
+<div align="center">
+  <img alt="mediapipeLogo" src="images/mediapipe.png" />
+</div>
 
+## CODE EXPLINATION
+<b>Importing Libraries</b>
 ```py
 import cv2
 import mediapipe as mp
@@ -26,6 +31,7 @@ from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 ```
+***
 
 
 
