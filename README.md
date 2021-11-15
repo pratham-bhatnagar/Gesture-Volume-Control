@@ -6,7 +6,7 @@
 
 > This Project uses OpenCV and MediaPipe to Control system volume 
 
-## REQUIREMENTS
+## 💾 REQUIREMENTS
 + opencv-python
 + mediapipe
 + comtypes
