@@ -27,9 +27,8 @@ After the palm detection over the whole image our subsequent hand landmark model
 
 To obtain ground truth data, we have manually annotated ~30K real-world images with 21 3D coordinates, as shown below (we take Z-value from image depth map, if it exists per corresponding coordinate). To better cover the possible hand poses and provide additional supervision on the nature of hand geometry, we also render a high-quality synthetic hand model over various backgrounds and map it to the corresponding 3D coordinates.
 <div align="center">
-  <img alt="mediapipeLogo" src="images/hand_landmarks_docs.png" height="200 x    " />
-   <i>21 hand landmarks<i>
-    <img alt="mediapipeLogo" src="images/htm.jpg" height="400 x    "/>
+    <img alt="mediapipeLogo" src="images/hand_landmarks_docs.png" height="200 x    " />
+    <img alt="mediapipeLogo" src="images/htm.jpg" height="360 x" weight ="640 x" />
     
 </div>
 
