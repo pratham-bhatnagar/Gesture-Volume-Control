@@ -101,7 +101,7 @@ with mp_hands.Hands(
             )
 ```
 ***
-
+Using multi_hand_landmarks method for Finding postion of Hand landmarks
 ```py
 lmList = []
     if results.multi_hand_landmarks:
@@ -111,9 +111,56 @@ lmList = []
         cx, cy = int(lm.x * w), int(lm.y * h)
         lmList.append([id, cx, cy])    
 ```
+***
+Assigning variables for Thumb and Index finger position
+```py
+if len(lmList) != 0:
+      x1, y1 = lmList[4][1], lmList[4][2]
+      x2, y2 = lmList[8][1], lmList[8][2]
+```
+***
+Marking Thumb and Index finger using `cv2.circle()` and Drawing a line between them using `cv2.line()`
+```py
+cv2.circle(image, (x1,y1),15,(255,255,255))  
+cv2.circle(image, (x2,y2),15,(255,255,255))  
+cv2.line(image,(x1,y1),(x2,y2),(0,255,0),3)
+length = math.hypot(x2-x1,y2-y1)
+if length < 50:
+    cv2.line(image,(x1,y1),(x2,y2),(0,0,255),3)
+```
+***
+Converting Length range into Volume range using `numpy.interp()`
+```py
+vol = np.interp(length, [50, 220], [minVol, maxVol])
+```
+***
+Changing System Volume using `volume.SetMasterVolumeLevel()` method
+```py
+volume.SetMasterVolumeLevel(vol, None)
+volBar = np.interp(length, [50, 220], [400, 150])
+volPer = np.interp(length, [50, 220], [0, 100])
+```
+***
+Drawing Volume Bar using `cv2.rectangle()` method
+```py
+cv2.rectangle(image, (50, 150), (85, 400), (0, 0, 0), 3)
+cv2.rectangle(image, (50, int(volBar)), (85, 400), (0, 0, 0), cv2.FILLED)
+cv2.putText(image, f'{int(volPer)} %', (40, 450), cv2.FONT_HERSHEY_COMPLEX,
+        1, (0, 0, 0), 3)}
 
-
-
+```
+***
+Displaying Output using `cv2.imshow` method
+```py
+cv2.imshow('handDetector', image) 
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+      break
+```
+***
+Closing webCam
+```py
+cam.release()
+```
 
 <div align = "center">
 <h2>📬 Contact</h2>
