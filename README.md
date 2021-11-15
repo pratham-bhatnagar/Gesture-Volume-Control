@@ -59,7 +59,7 @@ Source: [MediaPipe Hands Solutions](https://google.github.io/mediapipe/solutions
 </div>
 
 
-## 📝 CODE EXPLINATION
+## 📝 CODE EXPLANATION
 <b>Importing Libraries</b>
 ```py
 import cv2
